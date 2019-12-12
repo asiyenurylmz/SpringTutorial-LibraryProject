@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+    url: jdbc:mysql://127.0.0.1:3306/mysql?useUnicode=true&useLegacyDatetimeCode=false&serverTimezone=Turkey
+    username: root
+    password: 12345
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.MySQL5Dialect
