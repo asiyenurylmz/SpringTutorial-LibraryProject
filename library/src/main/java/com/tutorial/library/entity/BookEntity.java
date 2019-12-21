@@ -37,8 +37,8 @@ public class BookEntity extends BaseEntity {
 	private String author;
 	
 
-	@ManyToMany(mappedBy = "booksInTheLibrary")
-	//(fetch = FetchType.EAGER)
+	@ManyToMany(fetch = FetchType.EAGER)
+	//(mappedBy = "booksInTheLibrary")
 //	@JoinTable(name = "library_book", joinColumns = @JoinColumn(name = "book_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "library_id", referencedColumnName = "id"))
 	private List<LibraryEntity> librariesHaveTheBook;     //Seçili Kitabın stokta olduğu kütüphaneler listesi 
 	
